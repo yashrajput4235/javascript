@@ -25,6 +25,57 @@ Apple
 Blueberry
 Cherry
 */
-// map function
-// array methods
-let numbers = [1, 2, 3, 4, 5];
+
+/* map function
+In JavaScript, the map() function is used to create a new array by 
+transforming each element of an existing array.*/
+
+let originalArray = [1, 2, 3, 4, 5];
+let mappedArray=originalArray.map((element)=>element*2);
+console.log(mappedArray); // [2, 4, 6, 8, 10]
+
+/* Advance loops in arrays
+for...of loop
+The for...of loop in JavaScript is used to iterate over iterable objects like arrays, strings, maps, sets, etc.*/
+
+let colors = ["Red", "Green", "Blue"];
+for (let color of colors) {
+    console.log(color);
+}
+/* Output:
+Red
+Green
+Blue
+*/
+
+// forEach loop
+colors.forEach((color) => {
+    console.log(color);
+});
+/* Output:
+Red
+Green
+Blue
+*/
+
+/* filter function
+The filter() function in JavaScript creates a new array with all elements that pass the test implemented by the provided function.*/
+
+let numbers = [10, 15, 20, 25, 30];
+let filteredNumbers=numbers.filter((num)=>num>20);
+console.log(filteredNumbers); // [25, 30]
+
+/* reduce function
+The reduce() function in JavaScript executes a reducer function on each element of the array, resulting in a single output value.*/
+
+let sum=numbers.reduce((accumulator,currentValue)=>accumulator+currentValue,0);
+console.log(sum); // 100        
+/* Output:10 + 15 + 20 + 25 + 30 = 100
+*/  
+/* find function
+The find() function in JavaScript returns the value of the first element in the array that satisfies the provided testing function.*/
+
+let foundNumber=numbers.find((num)=>num>18);
+console.log(foundNumber); // 20 
+
+
