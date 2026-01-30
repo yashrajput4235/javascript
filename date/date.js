@@ -1,4 +1,4 @@
-/* date in javqascriptript
+/* date in javascript
 Date objects are used to work with dates and times in JavaScript.
 They provide various methods to get and set date and time components,
 as well as perform date calculations.
