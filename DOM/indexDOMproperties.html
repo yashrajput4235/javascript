@@ -13,10 +13,29 @@
     </style>
 </head>
 <body>
-    <h1 id="h1">DOM Manipulation</h1>
+    <h1 class="wdm">DOM Manipulation</h1>
     <script>
-        let element =document.querySelector("h1");
+        let element =document.querySelector(".wdm");
         console.log(element);
+        console.log('text content:',element.textContent);
+        console.log('inner html:',element.innerHTML);
+        console.log('inner text:',element.innerText);
+        console.log('outer html:',element.outerHTML);
+        console.log('outer text:',element.outerText);
+        console.log('class name:',element.className);
+        console.log('tag name:',element.tagName);
+        console.log('parent element:',element.parentElement);
+        console.log('first child:',element.firstElementChild);
+        console.log('last child:',element.lastElementChild);
+        console.log('next sibling:',element.nextElementSibling);
+        console.log('previous sibling:',element.previousElementSibling);
+        console.log('style:',element.style);
+        console.log('attributes:',element.attributes);
+        console.log('attribute value:',element.getAttribute('class'));
+        element.setAttribute('id','wdm');
+        console.log('attribute value:',element.getAttribute('id'));
+        element.removeAttribute('id');
+        console.log('attribute value:',element.getAttribute('id')); 
     </script>
 </body>
 
