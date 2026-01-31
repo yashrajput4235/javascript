@@ -6,7 +6,8 @@ It represents the page so that programs can change the document structure, style
 const headingElement = document.getElementById("main-heading");
 console.log(headingElement);
 
-/*Example: Selecting Elements by Tag Name */
+/*Example: Selecting Elements by Tag Name Elements by tag
+div*/
 const paragraphElements = document.getElementsByTagName("p");
 console.log(paragraphElements);
 
@@ -14,7 +15,8 @@ console.log(paragraphElements);
 const itemElements = document.getElementsByClassName("item");
 console.log(itemElements);
 
-/*Example: Selecting Elements using querySelector */
+/*Example: Selecting Elements using querySelector First matching CSS selector
+classname=.box, id=#title, tagname=div p */
 const firstItem = document.querySelector(".item");
 console.log(firstItem);
 
@@ -62,3 +64,38 @@ console.log(nextSibling);
 
 const previousSibling = headingElement.previousElementSibling;
 console.log(previousSibling);   
+ 
+/*DOM Properties*/  
+// textContent  : get or sets the text content of an element(No html tags)
+console.log(headingElement.textContent);
+// innerText : get or sets the text content of an element(With html tags)
+console.log(headingElement.innerText);  
+// innerHTML : get or sets the HTML content of an element
+console.log(headingElement.innerHTML);
+// outerHTML : get or sets the HTML content of an element(including the element itself)
+console.log(headingElement.outerHTML);
+//style : get or sets the style of an element access inline styles
+console.log(headingElement.style);
+//className : get or sets the class name of an element
+console.log(headingElement.className);
+//tagName : get the tag name of an element
+console.log(headingElement.tagName);
+
+/*DOM Attributes*/
+//Attributes:attributes are the extra information written inside an HTML tag that describe or configure that element.
+//getAttribute():get the value of an attribute
+console.log(headingElement.getAttribute("id"));
+//setAttribute():set the value of an attribute
+headingElement.setAttribute("id","new-id");
+console.log(headingElement.getAttribute("id"));
+//hasAttribute():check if an element has a specific attribute
+console.log(headingElement.hasAttribute("id"));
+//removeAttribute():remove an attribute
+headingElement.removeAttribute("id");
+console.log(headingElement.hasAttribute("id")); 
+
+
+
+
+
+       
