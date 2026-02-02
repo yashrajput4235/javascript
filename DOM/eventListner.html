@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>              
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Event Handling Example</title> 
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head> 
+
+<body>     
+    <h1>We are learning events right now</h1> 
+
+    <button id="bt1">Change to Dark</button>
+    <button id="bt2">Change to Light</button>     
+
+    <script>
+        let bt1 = document.getElementById("bt1");
+        let bt2 = document.getElementById("bt2");
+
+        bt1.addEventListener("click", () => {
+            document.body.style.backgroundColor = "black";
+            document.body.style.color = "white";
+        });
+
+        bt2.addEventListener("mouseover", () => {
+            document.body.style.backgroundColor = "white";
+            document.body.style.color = "black";
+        });
+    </script>   
+
+</body>         
+</html>

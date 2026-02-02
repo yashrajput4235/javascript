@@ -13,6 +13,17 @@ Events are used to trigger actions or responses in the browser.
 4. Document events
 5. Window events
 */  
+/*Evetn listner in javascript
+An event listener is a function that waits for a specific event to occur on a particular element.
+When the event occurs, the event listener executes the specified function.
+To add an event listener to an element, use the addEventListener() method.
+The syntax for addEventListener() is:
+element.addEventListener(event, function, useCapture);
+- event: The type of event to listen for (e.g., "click", "keydown", "submit").
+- function: The function to execute when the event occurs.
+- useCapture (optional): A boolean value that indicates whether to use event capturing or bubbling. Default is false (bubbling).
+*/
+// Adding event listeners examples
 // Example of mouse event
 document.getElementById("myButton").addEventListener("click",function(){
     alert("Button clicked!");

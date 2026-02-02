@@ -1,0 +1,61 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>              
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Image Changer</title> 
+    <style>
+            body{
+                background-color: black;
+                color: white;
+                text-align: center;
+            }
+            .image_container img{
+                width: 600px;
+                border: 2px solid blue;
+                border-radius: 10px;
+            }
+            .image_container h2{
+                background-color: yellow;
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                padding:10px;
+                border-radius: 10px;
+                border:1px solid blue;
+            }
+            .image_container{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+    </style>
+   
+</head> 
+<body>     
+    <h1>Image Changer</h1> 
+     <div class="image_container">
+        <img src="https://as2.ftcdn.net/v2/jpg/02/57/75/51/1000_F_257755130_JgTlcqTFxabsIKgIYLAhOFEFYmNgwyJ6.jpg" alt="" >
+        <h2>Londan</h2>
+
+     </div>  
+    <script>
+        let img=document.querySelector("img");
+        let h2=document.querySelector("h2");
+        let prevSrc=img.src;
+        let prevText=h2.innerText;
+        img.addEventListener("mouseover",()=>{
+            img.src="https://as1.ftcdn.net/v2/jpg/02/73/03/02/1000_F_273030277_v8roAx6Z4kclxzNcBUIavuLitEfZySij.jpg";
+            h2.innerText="Paris";
+            img.style.border="2px solid yellow";
+        });
+         img.addEventListener("mouseleave",()=>{
+            img.src=prevSrc;
+            h2.innerText=prevText;
+            img.style.border="2px solid blue";
+        });
+       
+    </script>   
+
+</body>         
+</html>
